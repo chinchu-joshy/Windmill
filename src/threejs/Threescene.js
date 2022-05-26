@@ -6,7 +6,7 @@ function Threescene() {
   useEffect(() => {
     const innerThreeRef=mountRef.current
    const scene=new THREE.Scene();
-   scene.background = new THREE.Color( 0x03293F );
+   scene.background = new THREE.Color( 0x0d283b);
    const renderer=new THREE.WebGL1Renderer()
    renderer.setSize(window.innerWidth,window.innerHeight)
    innerThreeRef.appendChild(renderer.domElement)

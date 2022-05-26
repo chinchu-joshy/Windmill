@@ -1,13 +1,15 @@
 
 import './App.css';
-import Header from './navigatiobar/Header';
+
+import './bootstrap.min.css'
+import Home from './pages/Home';
 import Threescene from './threejs/Threescene';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-     <Threescene/>
+     <Home/>
+     
     </div>
   );
 }

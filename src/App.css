@@ -1,80 +1,337 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-.head-main{
+.head-main {
   width: 100vw;
   height: 10vh;
   /* background-image: linear-gradient(to right, rgb(3, 41, 63), rgb(5, 12, 14)); */
-  background-color: rgb(3, 41, 63); 
+  background-color: rgb(13 40 59);
   display: flex;
   flex-direction: row;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
-
 
 /* creating the header */
-.head-left{
-  padding-left: 5vw;
-  width: 25vw;
+.head-left {
+  width: 30vw;
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+  /* background-color: red; */
+  box-sizing: border-box;
 }
-.brand{
+.brand {
   color: rgb(236, 214, 115);
 }
-i{
+i {
   color: rgb(236, 214, 115);
-  margin-right: 4px; 
-  margin-left: 4px; 
+  margin-right: 4px;
+  margin-left: 4px;
 }
-.head-middle{
-  width: 25vw;
+.head-middle {
+  width: 30vw;
   display: flex;
   flex-direction: row;
   align-items: center;
+ 
+  box-sizing: border-box;
 }
-.head-middle UL{
+.head-middle UL {
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  padding-inline-start: 0px !important;
   width: 100%;
   list-style-type: none;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
-.head-middle ul li{
-  margin-right: 6px;
+.head-right {
+  /* background-color: yellow; */
+
+  width: 30vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+.head-middle ul li {
+  margin-right: 8px;
+  margin-left: 8px;
   color: rgb(236, 214, 115);
   font-weight: 500;
   cursor: pointer;
 }
-.head-middle ul li:hover{
+.head-middle ul li:hover {
   color: rgb(240, 239, 235);
 }
+.image-brand {
+  width: 200px;
+  height: auto;
+}
+.icons {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+.head-phone,
+.head-person,
+.head-menu {
+  width: 31px;
+  margin-left: 30px;
+}
 
+/* The right section */
+
+.outer-container {
+  width: 100vw;
+  background-color: black;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  height: 55vh;
+  background-color: rgb(13 40 59);
+  display: flex;
+  flex-direction: row;
+}
+.right-section {
+  width: 20vw;
+ 
+}
+.left-section {
+ 
+  width: 30vw;
+  height: 100%;
+}
+.middle-section {
+  width: 40vw;
+  
+ 
+}
+.date-box {
+  width: 90%;
+  height: 6.5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.date {
+  width: 8em;
+
+  height: 2em;
+  border-left: 3px solid rgb(63, 173, 192);
+  border-radius: 2px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding-left: 2px;
+}
+.date h1 {
+  top: 0px;
+  left: 5px;
+  color: white;
+  font-size: 19px;
+  font-weight: 400;
+  margin-right: 2px;
+}
+.date h4 {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+.status {
+  font-display: flex;
+  justify-content: end;
+  width: 10em;
+  position: relative;
+  height: 6.5vh;
+}
+.status p {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: white;
+}
+/* first csrd design */
+.card-top {
+  /* background-color: rgb(3, 41, 63);  */
+  background-color: rgb(29, 62, 85);
+  height: 13vh;
+  opacity: 0.5;
+  color: white;
+  width: 90%;
+  border-radius: 7px 7px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  height: 13vh;
+}
+
+.title-card {
+  width: 35%;
+  height: 13vh;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: start;
+}
+.title-card ul {
+  width: 100%;
+
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  padding-inline-start: 0px !important;
+  line-height: 29px;
+  font-weight: 500;
+}
+.title-card ul li {
+  margin-left: auto;
+}
+.progress-bar {
+  width: 45%;
+  background-color: rgb(29, 62, 85) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-bar {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 10px;
+  background-color: #25b1b6;
+  border-radius: 10px;
+}
+.main-bar .inside {
+  width: 40%;
+  background-color: rgb(87, 220, 238);
+  height: 10px;
+  border-radius: 10px;
+}
+.values {
+  width: 25%;
+}
+.values ul {
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  line-height: 29px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  padding-inline-start: 0px !important;
+}
+/* deatails regarding the whether  */
+.detail-board {
+  margin-top: 15px;
+  background-color: rgb(55, 81, 88);
+  height: 30vh;
+  opacity: 0.5;
+  color: white;
+  width: 90%;
+  border-radius: 0px 0px 7px 7px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-image: url("./images/wether_bg.png");
+  background-size: cover;
+  padding: 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.card-1,
+.card-2,
+.card-3,
+.card-4 {
+  color: white;
+  width: 47.5%;
+  height: 40%;
+
+  background-color: rgb(15, 15, 15);
+  opacity: 0.4;
+  border-radius: 5px;
+}
+.card-1 ul,
+.card-2 ul,
+.card-3 ul,
+.card-4 ul{
+  
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  line-height: 29px;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  padding-inline-start: 0px !important;
+}
+.card-1,
+.card-3 {
+  margin-right: 20px;
+}
+.sun  li img{
+color: #25b1b6;
+border-color: azure;
+width: 20px;
+height: 10px;
+}
+.date-boxs {
+  width: 90%;
+  height: 6.5vh;
+  display: flex;
+  flex-direction: row;
+ 
+  justify-content: space-between;
+}
+.statuss {
+  font-display: flex;
+  justify-content: end;
+  width: 20em;
+  position: relative;
+  height: 6.5vh;
+  color: white;
+}
+.statuss p{
+  position: absolute;
+  left: 0;
+  top: 20px;
+  color: white;
+}
+/* details regarding the turbin */
+.selecting-turbin ul {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  line-height: 29px;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+align-items: center;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  padding-inline-start: 0px !important;
+}
+.selecting-turbin ul li{
+ margin-left: 2px;
+}
