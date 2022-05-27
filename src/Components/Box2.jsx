@@ -17,7 +17,7 @@ function Box2() {
             <li>Wind speed</li>
           </ul>
         </div>
-        <div className="progress-bar">
+        <div className="progress-bar-box">
           <div className="main-bar">
             <div className="inside"></div>
           </div>

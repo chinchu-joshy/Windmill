@@ -5,6 +5,8 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import Box2 from "../Components/Box2";
 import Box3 from "../Components/Box3";
 import Box4 from "../Components/Box4";
+import Box6 from "../Components/Box6";
+import Box7 from "../Components/Box7";
 
 function Home() {
   return (
@@ -30,19 +32,26 @@ function Home() {
 
           </div>
           <div className="middle-section">
-          <div className="date-boxs">
+          <div className="selection-tab">
               
-              <div className="statuss">
+              <div className="data">
                   <p>Turbins machine status</p>
            
               </div>
             </div>
             <Box4/>
           </div>
-          <div className="right-section"></div>
+          <div className="right-section">
+            <Box6/>
+           
+            <Box7/>
+          </div>
+        </div>
+        <div id="three">
+
+        <Threescene />
         </div>
     
-      <Threescene />
     </Header>
   );
 }

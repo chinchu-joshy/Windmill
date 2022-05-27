@@ -31,7 +31,7 @@ i {
   display: flex;
   flex-direction: row;
   align-items: center;
- 
+
   box-sizing: border-box;
 }
 .head-middle UL {
@@ -64,7 +64,7 @@ i {
 .head-middle ul li:hover {
   color: rgb(240, 239, 235);
 }
-.image-brand {
+.image-brand-site {
   width: 200px;
   height: auto;
 }
@@ -87,6 +87,7 @@ i {
 
 .outer-container {
   width: 100vw;
+  height: 100vh;
   background-color: black;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -97,17 +98,18 @@ i {
 }
 .right-section {
   width: 20vw;
- 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .left-section {
- 
   width: 30vw;
   height: 100%;
 }
 .middle-section {
   width: 40vw;
-  
- 
 }
 .date-box {
   width: 90%;
@@ -158,9 +160,9 @@ i {
 /* first csrd design */
 .card-top {
   /* background-color: rgb(3, 41, 63);  */
-  background-color: rgb(29, 62, 85);
+  background-color: rgba(29, 62, 85, 0.5);
   height: 13vh;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   color: white;
   width: 90%;
   border-radius: 7px 7px 0px 0px;
@@ -197,9 +199,9 @@ i {
 .title-card ul li {
   margin-left: auto;
 }
-.progress-bar {
+.progress-bar-box {
   width: 45%;
-  background-color: rgb(29, 62, 85) !important;
+  /* background-color: rgba(29, 62, 85,.5) !important; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,9 +232,7 @@ i {
   line-height: 29px;
   display: flex;
   flex-direction: column;
-
   justify-content: center;
-
   margin-block-start: 0em !important;
   margin-block-end: 0em !important;
   padding-inline-start: 0px !important;
@@ -240,9 +240,9 @@ i {
 /* deatails regarding the whether  */
 .detail-board {
   margin-top: 15px;
-  background-color: rgb(55, 81, 88);
+  background-color: rgba(55, 81, 88, 0.5);
   height: 30vh;
-  opacity: 0.5;
+
   color: white;
   width: 90%;
   border-radius: 0px 0px 7px 7px;
@@ -263,47 +263,59 @@ i {
   width: 47.5%;
   height: 40%;
 
-  background-color: rgb(15, 15, 15);
-  opacity: 0.4;
+  background-color: rgb(5, 26, 31);
+  opacity: 0.5;
   border-radius: 5px;
 }
 .card-1 ul,
 .card-2 ul,
 .card-3 ul,
-.card-4 ul{
-  
+.card-4 ul {
   width: 100%;
   height: 100%;
   list-style-type: none;
-  line-height: 29px;
-  display: flex;
-  flex-direction: row;
 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+
+  margin-left: 5px;
+  /* justify-content: center; */
 
   margin-block-start: 0em !important;
   margin-block-end: 0em !important;
   padding-inline-start: 0px !important;
 }
+.card-1 ul li div,
+.card-2 ul li div,
+.card-3 ul li div,
+.card-4 ul li div {
+  width: 100%;
+  line-height: 5px;
+  opacity: 1 !important;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white !important;
+}
 .card-1,
 .card-3 {
   margin-right: 20px;
 }
-.sun  li img{
-color: #25b1b6;
-border-color: azure;
-width: 20px;
-height: 10px;
+
+.image-brand{
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
 }
-.date-boxs {
-  width: 90%;
+.selection-tab {
+  width: 50%;
   height: 6.5vh;
   display: flex;
   flex-direction: row;
- 
-  justify-content: space-between;
 }
-.statuss {
+.data {
+  margin-left: 21%;
   font-display: flex;
   justify-content: end;
   width: 20em;
@@ -311,7 +323,7 @@ height: 10px;
   height: 6.5vh;
   color: white;
 }
-.statuss p{
+.data p {
   position: absolute;
   left: 0;
   top: 20px;
@@ -327,11 +339,180 @@ height: 10px;
   flex-direction: row;
 
   justify-content: center;
-align-items: center;
+  align-items: center;
   margin-block-start: 0em !important;
   margin-block-end: 0em !important;
   padding-inline-start: 0px !important;
 }
-.selecting-turbin ul li{
- margin-left: 2px;
+.selecting-turbin ul li {
+  margin-left: 3px;
+}
+
+.btn-success {
+  color: #fff;
+  background-color: rgb(29, 62, 85) !important;
+  border-color: rgb(29, 62, 85) !important;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+  min-width: 150px;
+}
+.text-bottom {
+  color: white;
+  font-size: small;
+}
+.uv-index {
+  color: white;
+}
+.status-uv {
+  color: white;
+}
+.status-bar {
+  width: 100px !important;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  border-radius: 10px;
+  margin-left: 10px;
+}
+/* creating the right side boxes */
+.graph-box {
+  background-color: rgb(29, 62, 85);
+  height: 20vh;
+  opacity: 0.5;
+  color: white;
+  width: 90%;
+  border-radius: 7px 7px 7px 7px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.circle-indicator-box {
+  background-color: rgba(29, 62, 85, 0.5);
+  height: 18vh;
+
+  color: white;
+  width: 90%;
+  border-radius: 7px 7px 7px 7px;
+  display: flex;
+  flex-direction: row;
+}
+.rain-value,
+.rain-prediction {
+  font-size: small;
+}
+.circle-indicator-box .left {
+  width: 50%;
+}
+.circle-indicator-box .left ul {
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  
+  
+}
+.circle-indicator-box .left ul li{
+
+  margin-right: auto;
+  font-size: small;
+}
+.circle-indicator-box .right{
+
+  display: flex;
+  align-items: center;
+}
+.excellent {
+  color: chartreuse;
+}
+.good {
+  color: rgb(230, 230, 116);
+}
+.bad {
+  color: red;
+}
+.maintenance-status{
+ margin-top: 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  background-color:rgba(42, 118, 165, 0.5) ;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.maintenance-status div{
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  font-size: small;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+
+  height: 60px;
+}
+.maintenance-status .yellow-box{
+  margin-bottom: 3px;
+  display: flex;
+ justify-content: center;
+ border-radius: 6px;
+ position: relative;
+width: 40%;
+height: 25px;
+background-color: rgb(247, 247, 122);
+color: black;
+}
+.maintenance{
+  font-size: small;
+}
+.maintenance-status div .yellow-box p{
+ 
+ position: absolute;
+ top: 3px;
+}
+.maintenance-status div .red-box p{
+ 
+  position: absolute;
+  top: 3px;
+}
+.maintenance-status .red-box{
+  position: relative;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  height: 25px;
+background-color: rgb(190, 35, 48);
+}
+.maintenance-status p {
+  display: block;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.image-indicating-circle-graph{
+  width: 160px;
+  height: 160px;
+}
+/* screen for 3d  */
+#three{
+ height: 20vh;
 }

@@ -5,7 +5,7 @@ function Header(props) {
     <div className='head-main'> 
     <div className="head-left">
   
-   <img className="image-brand" src="./images/1.png" alt=""  />
+   <img className="image-brand-site" src="./images/1.png" alt=""  />
   
     </div>
     <div className="head-middle">
@@ -15,6 +15,7 @@ function Header(props) {
         </li>
         <li>ANALYSIS</li>
         <li>PREDICTION</li>
+        <li>NEWONE</li>
     </ul>
     </div>
     <div className="head-right">
@@ -23,7 +24,7 @@ function Header(props) {
     <img className="head-phone" src="./images/headset.png" alt=""  />
     </li>
     <li>
-    <img className="head-person" src="./images/headset.png" alt=""  />
+    <img className="head-person" src="./images/user.png" alt=""  />
     </li>
     <li>
     <img className="head-menu" src="./images/more.png" alt=""  />

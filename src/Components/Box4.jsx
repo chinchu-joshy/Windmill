@@ -6,26 +6,27 @@ function Box4() {
         <ul>
             <li>
               <div className="trubin">
-              <Dropdown>
+              <Dropdown className='dropdown-turbine'>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
+   Turbin 1
   
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+    <Dropdown.Item href="#/action-1"> Turbin 2</Dropdown.Item>
+    <Dropdown.Item href="#/action-2"> Turbin 3</Dropdown.Item>
+    <Dropdown.Item href="#/action-3"> Turbin 4</Dropdown.Item>
   </Dropdown.Menu>
 </Dropdown>
               </div>
-              <p></p>
+              <p className='text-bottom'>Turbin</p>
             </li>
             <li>
             <div className="trubin">
             <Dropdown>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
+
+    Gearbox
   
   </Dropdown.Toggle>
 
@@ -36,13 +37,13 @@ function Box4() {
   </Dropdown.Menu>
 </Dropdown>
 </div>
-<p></p>
+<p className='text-bottom'>Part</p>
             </li>
             <li>
             <div className="trubin">
             <Dropdown>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
+    Bearing D
   
   </Dropdown.Toggle>
 
@@ -53,13 +54,13 @@ function Box4() {
   </Dropdown.Menu>
 </Dropdown>
 </div>
-<p></p>
+<p className='text-bottom'>Sub part</p>
             </li>
             <li>
             <div className="trubin">
             <Dropdown>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Dropdown Button
+    Good
   
   </Dropdown.Toggle>
 
@@ -70,7 +71,7 @@ function Box4() {
   </Dropdown.Menu>
 </Dropdown>
 </div>
-<p></p>
+<p className='text-bottom'>Condition</p>
             </li>
 
 
