@@ -14,25 +14,28 @@ function Box7() {
           <li>
             Bad:<span className="bad">10%</span>{" "}
           </li>
-          
+
           <li>
             <div className="maintenance-status">
-                <p className="maintenance">Maintenance</p>
-               <div>
-               <div className="yellow-box">
-                <p>30%</p>
+              <p className="maintenance">Maintenance</p>
+              <div>
+                <div className="yellow-box">
+                  <p>30%</p>
+                </div>
+                <div className="red-box">
+                  <p>10%</p>
+                </div>
               </div>
-              <div className="red-box">
-                <p>10%</p>
-              </div>
-               </div>
-              
             </div>
           </li>
         </ul>
       </div>
       <div className="right">
-          <img src="images/group.png" alt="image of graph" className="image-indicating-circle-graph" />
+        <img
+          src="images/group.png"
+          alt="image of graph"
+          className="image-indicating-circle-graph"
+        />
       </div>
     </div>
   );

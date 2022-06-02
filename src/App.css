@@ -516,3 +516,18 @@ background-color: rgb(190, 35, 48);
 #three{
  height: 20vh;
 }
+/* --------------------------- visualisation page --------------------------- */
+.main-visualisation{
+  display: flex;
+  background-color: rgb(13 40 59);
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.left-visualisation{
+width: 20vw;
+
+}
+.right-visualistion{
+  width: 20vw;
+
+}
