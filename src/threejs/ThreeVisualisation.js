@@ -1,24 +1,47 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import * as THREE from "three";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import gsap from "gsap";
-
+import { Form } from "react-bootstrap";
 function ThreeVisualisation() {
+  const [first, setfirst] = useState(null)
   const mountRef = useRef(null);
   let loading = true;
-let status=false
+  let status = false;
+  const info = {
+    turbine1: {
+      fan: "ok",
+      generator: "not",
+      motor1: "not",
+      motor2: "not",
+      support: "ok",
+    },
+    turbine2: {
+      fan: "not",
+      generator: "ok",
+      motor1: "ok",
+      motor2: "ok",
+      support: "ok",
+    },
+    turbine3: {
+      fan: "ok",
+      generator: "not",
+      motor1: "ok",
+      motor2: "not",
+      support: "ok",
+    },
+  };
   useEffect(() => {
+    console.log(info);
     const innerThreeRef = mountRef.current;
     const scene = new THREE.Scene();
     let mixer;
     let clipAction;
-
     let model;
     let generator;
     const clock = new THREE.Clock();
-
     scene.background = new THREE.Color(0x0d283b);
     const container = document.getElementById("three");
     const renderer = new THREE.WebGL1Renderer({ antialias: true });
@@ -62,7 +85,6 @@ let status=false
       gltf.scene.position.set(0, -3, 0);
       gltf.scene.rotation.y = -Math.PI / 1.5;
       gltf.scene.rotation.x = Math.PI / 6;
-     
       model = gltf.scene;
       scene.add(gltf.scene);
       if (scene.children) {
@@ -71,13 +93,12 @@ let status=false
       }
       mixer = new THREE.AnimationMixer(gltf.scene);
       clipAction = mixer.clipAction(gltf.animations[0]);
-
       clipAction.play();
     });
     loader.load("Model/windmill2/Turbaine.glb", function (gltf) {
-      gltf.scene.name = "Windturbin";
-      generator= gltf.scene
-      gltf.scene.visible=false
+      gltf.scene.name = "turbine";
+      generator = gltf.scene;
+      gltf.scene.visible = false;
       // gltf.scene.scale.set(1.1, 1.1, 1.1);
       gltf.scene.position.set(0.8, 0.6, 1);
       gltf.scene.rotation.y = -Math.PI / 1.5;
@@ -104,40 +125,29 @@ let status=false
         -(event.clientY / window.innerHeight) * 2 + 1
       );
       raycaster.setFromCamera(mouse3D, camera);
-
       const intersects = raycaster.intersectObjects(scene.children);
-
       if (intersects.length > 0) {
         let object = intersects[0].object;
-        console.log(object);
         while (
           !(object instanceof THREE.Scene) &&
           !object.name.includes("Windturbin") &&
-          object.name.includes("hull")
+          object.name.includes("body")
         ) {
           object = object.parent;
-        updateStatus()
-         
-          
-          
+          updateStatus();
         }
       }
     }
-async function updateStatus(){
- await gsap.to(model.scale, { x: 3, z: 3, duration: 10 ,opacity:0});
-  changeAnimation()
-}
-async function changeAnimation(){
-  model.visible=false
-  // await gsap.timeline({ 
-     
-  //   defaults: { duration: 3 }
-  // }).to(model, { opacity: 0 })
-  generator.visible=true
-
-}
+    async function updateStatus() {
+      await gsap.to(model.scale, { x: 3, z: 3, duration: 10, opacity: 0 });
+      changeAnimation();
+    }
+    async function changeAnimation() {
+      model.visible = false;
+      generator.visible = true;
+    }
     animate();
-  }, [status]);
+  }, [status,first]);
 
   return (
     <>
@@ -145,7 +155,26 @@ async function changeAnimation(){
       {loading == true && (  <div className="spinner-grow" role="status">
  
  </div>)} */}
-      <div id="visual" ref={mountRef}></div>;
+      <div id="visual" ref={mountRef}>
+       <Form>
+       <Form.Select
+                aria-label="Default select example"
+                className="mb-3"
+                onChange={(e) => {
+                  setfirst(e.target.value);
+                  console.log(e.target.value)
+                  window.localStorage.setItem("state", e.target.value);
+                }}
+              >
+                <option selected value={0}>Select turbine</option>
+                <option value={1}>Turbine 1</option>
+                <option value={2}>Turbine 2</option>
+                <option value={3}>Turbine 3</option>
+               
+              </Form.Select>
+       </Form>
+      </div>
+      ;
     </>
   );
 }
